@@ -39,7 +39,7 @@ const PricingCard: React.FC<{ plan: PlanType }> = ({ plan }) => {
   );
 };
 
-const PricingTable: React.FC = () => {
+export default function PricingTable() {
   const plans: PlanType[] = [
     {
       name: "Basic",
@@ -63,7 +63,9 @@ const PricingTable: React.FC = () => {
   ];
 
   return (
+    
     <div className="py-12 bg-gray-50">
+      
       <div className="text-center mb-12">
         <h2 className="text-3xl font-bold">Our Price</h2>
         <h3 className="text-4xl font-bold mt-2">Price Plans</h3>
@@ -79,12 +81,15 @@ const PricingTable: React.FC = () => {
       </div>
       <div className="text-center mt-12">
         <span>Interested in a custom plan? </span>
-        <a href="#" className="text-blue-600 hover:text-blue-800">
+        <a href="https://www.linkedin.com/in/seyedahmaddv"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-blue-600 hover:text-blue-800">
           Get in touch
         </a>
       </div>
+      <hr className="border-t-2 border-gray-200 my-8" />
     </div>
   );
 };
 
-export default PricingTable;
